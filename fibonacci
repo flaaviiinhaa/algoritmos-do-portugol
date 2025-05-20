@@ -1,0 +1,30 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro num
+		escreva("Quantos elementos da sequência deseja calcular? ")
+		leia(num)
+		para (inteiro i = 1; i <= num ;
+		i++)
+		{
+		escreva(fibonacci(i) , " ")
+	}
+	escreva("\n")
+	}
+	
+	funcao inteiro fibonacci(inteiro posicao)
+		{
+			se (posicao == 1)
+			{
+				retorne 0
+			}
+			senao se (posicao == 2)
+		{
+			retorne 1
+		}
+		retorne fibonacci(posicao - 1) +
+		fibonacci(posicao - 2)
+			}	
+}
