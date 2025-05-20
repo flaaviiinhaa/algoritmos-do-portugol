@@ -1,0 +1,41 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		
+ cadeia nome[3]
+ real nota[3][5]
+real media_Nota[3]
+ inteiro i, j
+ para (i = 0; i < 3; i++) {
+escreva("Digite o nome do estudante ", i + 1, ": ")
+leia(nome[i])
+para (j = 0; j < 5; j++) {
+escreva("Digite a nota ", j + 1," de ", nome[i], ":")
+leia(nota[i][j])
+      }
+escreva("\n")
+    }
+    para (i = 0; i < 3; i++) {
+     real soma = 0.0
+     para (j = 0; j < 5; j++) {
+      soma = soma + nota[i][j]
+      }
+     media_Nota[i] = soma / 5.0
+    }
+    escreva("----------------- TABELA DE NOTAS ------------------\n")
+    para (i = 0; i < 3; i++) {
+    escreva("\nEstudante: ", nome[i], " -> \nNotas: ")
+    para (j = 0; j < 5; j++) {
+    escreva(nota[i][j], " ")
+      }
+    escreva("\nMédia: ", media_Nota[i], " - ")
+    se (media_Nota[i] >= 60.0) {
+     escreva("Aluno aprovado!\n")
+      } senao {
+      escreva("Aluno reprovado!\n")
+      }
+    }
+  }	
+}
