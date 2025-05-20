@@ -1,0 +1,17 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real base
+		real expoente
+
+		escreva("Digite o valor da base:")
+		leia(base)
+
+		escreva("Digite o valor do expoente:")
+		leia(expoente)
+
+		
+	}
+}
