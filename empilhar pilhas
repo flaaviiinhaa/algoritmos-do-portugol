@@ -1,0 +1,60 @@
+programa
+{
+    inteiro pilha[11]
+    inteiro topo = -1
+
+    funcao empilhar(inteiro valor)
+    {
+        se (topo == 12) {
+            escreva("Erro: Pilha cheia!\n")
+        }
+        senao {
+            topo = topo + 1
+            pilha[topo] = valor
+            escreva("Empilhado: ", valor, "\n")
+        }
+    }
+
+    funcao desempilhar()
+    {
+        se (topo == -1) {
+            escreva("Erro: Pilha vazia!\n")
+        }
+        senao {
+            escreva("Desempilhado: ", pilha[topo], "\n")
+            topo = topo - 1
+        }
+    }
+
+    funcao mostrarPilha()
+    {
+        se (topo == -1) {
+            escreva("Pilha está vazia.\n")
+        }
+        senao {
+            escreva("Conteúdo da pilha:\n")
+            inteiro i
+            para (i = topo; i >= 0; i = i - 1) {
+                escreva(pilha[i], "\n")
+            }
+        }
+    }
+
+    funcao inicio()
+    {
+        empilhar(0)
+        empilhar(2)
+        empilhar(4)
+        empilhar(6)
+        empilhar(8)
+        empilhar(10)
+        empilhar(12)
+        empilhar(14)
+        empilhar(16)
+        empilhar(18)
+        empilhar(20)
+        mostrarPilha()
+        desempilhar()
+        mostrarPilha()
+    }
+}
